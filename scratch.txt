@@ -1,0 +1,14 @@
+
+
+relations
+
+
+Programme ->hasMany->     Students->hasMany->    Result
+Result->belongsTo->     Students->belongsTo-> Programme
+
+
+Admin can CRUD Programme
+                ->admin can CRUD Students into said Programme
+                ->admin can CRUD marks into said students Results
+
+
