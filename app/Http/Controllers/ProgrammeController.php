@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Programme;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ProgrammeController extends Controller
 {
@@ -14,7 +15,7 @@ class ProgrammeController extends Controller
      */
     public function index()
     {
-        //
+        return view('Class/addClass');
     }
 
     /**
@@ -22,10 +23,7 @@ class ProgrammeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.

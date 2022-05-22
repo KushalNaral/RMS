@@ -12,3 +12,19 @@ Admin can CRUD Programme
                 ->admin can CRUD marks into said students Results
 
 
+Admin -> makes class -> adds student details
+
+
+TODO
+Create laravel login register and logout api
+Create class and students associated with the specific class
+
+
+    REGISTER STUDENT
+           Done by admin
+                has the following fields [NR -> not required for registering]
+                    name, email, pass, address, phone_number, exam_status[NR], id[NR]
+
+
+http://127.0.0.1:8000/api/rms?api_token=
+

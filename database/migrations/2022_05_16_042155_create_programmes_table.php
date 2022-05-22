@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('programmes', function (Blueprint $table) {
             $table->id();
-            $table->integer('semester_id');
             $table->string('branch');
             $table->integer('semester');
-            $table->integer('students_id')->references('id')->on('students')->onDelete('cascade');  //same as students id in the students table
+//            $table->integer('students_id')->references('id')->on('students')->onDelete('cascade');  //same as students id in the students table
 
 
             $table->timestamps();

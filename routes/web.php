@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\ApiAuthController;
+use App\Http\Controllers\ProgrammeController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+//adding new programme
+Route::get('/rms/addClass', [ProgrammeController::class, 'index'])->name('index');
+
+
+//enrolling student route
+Route::get('/rms/addStudent', [StudentController::class, 'index']);
+
+//login student route
+
+Route::get('/rms/loginStudent', [StudentController::class, 'login'])->name('studentLogin');
+
+//for api documentation
+
+Route::get('/docs', function ()
+{
+    return view('swagger.index');
+});
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
 });
